@@ -1,3 +1,8 @@
 .battlefield{
 	width: 50px;
 }
+
+#chat{
+	border: 5px dashed red;
+	padding: 5px;
+}
