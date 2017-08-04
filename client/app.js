@@ -88,7 +88,7 @@ $(document).ready(()=>{
 		time_remaining -= 10
 		if (time_remaining >= 0){
 			let seconds_left = Math.ceil(time_remaining/1000)
-			$("#next_game").text(`${seconds_left} second${seconds_left > 1 ? 's' : ''}`)
+			$("#next_game").text(`${seconds_left} second${seconds_left != 1 ? 's' : ''}`)
 		}
 	}, 10)
 })
