@@ -82,7 +82,7 @@ io.on("connection", (socket) => {
 		delete armies[socket.id]
 	})
 
-	socket.on("run_game", run_game)
+	socket.on("chat", msg => io.emit("new_chat", msg))
 })
 
 setInterval(() => {

@@ -71,6 +71,16 @@ $(document).ready(()=>{
 		send_army()
 	})
 
+	$("form").submit(e => {
+		e.preventDefault()
+		if(!$("#name").val()){
+			alert("You must enter a name to chat!")
+		} else {
+			socket.emit("chat", {name: $("#name").val(), message: $("#message").val()})
+			$("#message").val("")
+		}
+	})
+
 	socket.on("winner", () => $("#results").text("You win!"))
 
 	socket.on("loser", () => $("#results").text("You lose!"))
@@ -82,6 +92,10 @@ $(document).ready(()=>{
 
 	socket.on("time_remaining", time => {
 		time_remaining = time
+	})
+
+	socket.on("new_chat", msg => {
+		$("#chat").html(`<p><em>${msg.name} said...</em> ${msg.message}</p>` + $("#chat").html())
 	})
 
 	setInterval(() => {
