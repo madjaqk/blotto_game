@@ -14,7 +14,7 @@ const server = app.listen(PORT, () => {
 
 const io = require("socket.io").listen(server)
 const armies = {}
-const BETWEEN_GAME_INTERVAL = 1000*15
+const BETWEEN_GAME_INTERVAL = 1000*60
 let time_remaining = BETWEEN_GAME_INTERVAL
 
 function run_game(){
