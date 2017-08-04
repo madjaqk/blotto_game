@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sockets?</title>
+		<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1>Colonel Blotto Game</h1>
+		<h3 id="results"></h3>
+		<p>Next game in <span id="next_game"></span></p>
+		<input type="number" class="battlefield" id="bf0" value=4>
+		<input type="number" class="battlefield" id="bf1" value=4>
+		<input type="number" class="battlefield" id="bf2" value=4>
+		<input type="number" class="battlefield" id="bf3" value=4>
+		<input type="number" class="battlefield" id="bf4" value=4>
+		<button>Randomize Army</button>
+		<p>Remaining troops: <span id="remaining">5</span></p>
+	</body>
+</html>
